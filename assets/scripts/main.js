@@ -7,7 +7,7 @@ var $articleHeadings = $('#content').find('.article-body h2');
 
 if ($articleHeadings.length > 0) {
     var $jumpMenuWrapper = $('#jumpMenu').find('.wrapper');
-    $jumpMenuWrapper.append('<ul id="jumpMenuItems" class="menu_items"></ul');
+    $jumpMenuWrapper.append('<ul id="jumpMenuItems" class="menu-items"></ul');
 
     $articleHeadings.each(function () {
         var $this = $(this);
