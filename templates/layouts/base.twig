@@ -11,9 +11,7 @@
 						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
 					</h1>
 					<nav id="mainMenu" class="main-menu" role="navigation">
-						<div class="wrapper">
-							{% include "partials/menu.twig" with {'items': menu.get_items} %}
-						</div>
+						{% include "partials/menu.twig" with {'items': menu.get_items} %}
 					</nav>
 				</div>
 			{% endblock %}
