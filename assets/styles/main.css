@@ -716,6 +716,11 @@ body {
 
 .timestamp {
   font-size: small;
+  margin-top: -1em;
+}
+
+.comment-box {
+  display: none;
 }
 
 .wp-block-column {
