@@ -634,13 +634,21 @@ body {
 }
 
 .main-menu .menu-items {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
   margin: 0;
   padding: 0;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .main-menu .menu-items {
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+  }
 }
 .main-menu .menu-item {
   display: inline-block;
