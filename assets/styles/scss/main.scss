@@ -1,0 +1,17 @@
+// Import overrides for defaults
+@import 'partials/_overrides.scss';
+
+// Import NodeJS modules
+// Requires CLI "sass --load-path" option set to node_modules directory
+@import 'normalize.scss/normalize.scss';
+@import 'bourbon/core/_bourbon.scss';
+@import 'breakpoint-sass/stylesheets/_breakpoint.scss';
+
+// Import settings, etc
+@import 'partials/_fonts.scss';
+@import 'partials/_variables.scss';
+@import 'partials/_functions.scss';
+@import 'partials/_mixins.scss';
+
+// Import local partials
+@import 'partials/_base.scss';

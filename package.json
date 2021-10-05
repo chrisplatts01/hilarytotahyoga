@@ -1,0 +1,22 @@
+{
+  "name": "totah",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Chris Platts <chris@virelai.co.uk>",
+  "license": "MIT",
+  "dependencies": {
+    "bourbon": "^7.0.0",
+    "bourbon-neat": "^4.0.0",
+    "breakpoint-sass": "^2.7.1",
+    "include-media": "^1.4.9",
+    "jquery": "^3.6.0",
+    "normalize.scss": "^0.1.0",
+    "sassy-inputs": "^1.0.6",
+    "typey": "^1.1.2"
+  },
+  "scripts": {
+    "scss": "sass --load-path=node_modules assets/styles/scss/main.scss assets/styles/main.css",
+    "scss:watch": "sass --load-path=node_modules --watch assets/styles/scss/main.scss assets/styles/main.css",
+    "scss:build": "sass --load-path=node_modules --style=compressed assets/styles/scss/main.scss assets/styles/main.css"
+  }
+}

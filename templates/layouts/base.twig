@@ -1,0 +1,63 @@
+{% block html_head_container %}
+	{% include 'partials/html-header.twig' %}
+{% endblock %}
+
+	<body class="{{body_class}}" data-template="layouts/base.twig">
+		<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
+		<header class="header" >
+			{% block header %}
+				<div class="wrapper">
+					<h1 class="hdr-logo" role="banner">
+						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
+					</h1>
+					<nav id="main-menu" class="main-menu" role="navigation">
+						{% include "partials/menu.twig" with {'items': menu.get_items} %}
+					</nav>
+				</div>
+			{% endblock %}
+		</header>
+
+		{% if post.thumbnail %}
+		<section id="banner" class="banner">
+			<div class="wrapper banner_wrapper">
+				<figure class="banner_image">
+					<img class="banner_img" src="{{ post.thumbnail.src }}" alt="{{ site.description }}">
+					<figcaption class="banner_caption">{{ site.description }}</figcaption>
+				</figure>
+			</div>
+		</section>
+		{% endif %}
+
+		<nav id="jump-menu" class="jump-menu" role="navigation">
+			<div class="wrapper">
+				<p>Jump menu goes here</p>
+			</div>
+		</nav>
+
+		<section id="content" role="main" class="content-wrapper">
+			{% if title %}<h1>{{title}}</h1>{% endif %}
+			<div class="wrapper {{sidebar_class}}">
+				{% block content %}
+					Sorry, no content
+				{% endblock %}
+			</div>
+			{% if sidebar %}
+				<aside class="layout-sidebar">
+					{{sidebar}}
+				</aside>
+			{% endif %}
+		</section>
+
+		{% block footer %}
+			<footer id="footer">
+				<div class="wrapper">
+					{% include 'partials/footer.twig' %}
+				</div>
+			</footer>
+
+			<script type="text/javascript" src="{{ site.theme.link }}/node_modules/jquery/dist/jquery.min.js"></script>
+			<script type="text/javascript" src="{{ site.theme.link }}/assets/scripts/main.js"></script>
+			{{ function('wp_footer') }}
+		{% endblock %}
+	</body>
+</html>
