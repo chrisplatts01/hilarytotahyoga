@@ -10,9 +10,6 @@
 					<h1 class="hdr-logo" role="banner">
 						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
 					</h1>
-					<nav id="main-menu" class="main-menu" role="navigation">
-						{% include "partials/menu.twig" with {'items': menu.get_items} %}
-					</nav>
 				</div>
 			{% endblock %}
 		</header>
@@ -30,7 +27,7 @@
 
 		<nav id="jump-menu" class="jump-menu" role="navigation">
 			<div class="wrapper">
-				<p>Jump menu goes here</p>
+				{% include "partials/menu.twig" with {'items': menu.get_items} %}
 			</div>
 		</nav>
 
