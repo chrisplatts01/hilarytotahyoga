@@ -3,7 +3,7 @@ $(function() {
 /**
  * Build jump menu
  */
-var $articleHeadings = $('#content').find('.article-body h2');
+var $articleHeadings = $('#content').find('h2');
 
 if ($articleHeadings.length > 0) {
     var $jumpMenuWrapper = $('#jumpMenu').find('.wrapper');
