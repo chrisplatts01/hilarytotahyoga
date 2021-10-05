@@ -39,7 +39,7 @@ body {
   .wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: space-between;
     height: 96px;
 
     @include breakpoint($bp-small) {

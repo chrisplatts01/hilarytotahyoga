@@ -548,7 +548,7 @@ body {
 .header .wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: space-between;
   height: 96px;
 }
 @media (min-width: 768px) {
