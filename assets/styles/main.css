@@ -637,15 +637,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
   margin: 0;
   padding: 0;
-}
-@media (min-width: 768px) {
-  .main-menu .menu-items {
-    font-size: 18px;
-  }
 }
 .main-menu .menu-item {
   display: inline-block;
@@ -679,11 +674,6 @@ body {
   font-weight: 300;
   margin: 0;
   padding: 0;
-}
-@media (min-width: 768px) {
-  .jump-menu .menu-items {
-    font-size: 18px;
-  }
 }
 .jump-menu .menu-item {
   display: inline-block;

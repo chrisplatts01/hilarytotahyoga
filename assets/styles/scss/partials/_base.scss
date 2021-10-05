@@ -125,14 +125,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 600;
     margin: 0;
     padding: 0;
-
-    @include breakpoint($bp-small) {
-      font-size: 18px;
-    }
   }
 
   .menu-item {
@@ -168,10 +164,6 @@ body {
     font-weight: 300;
     margin: 0;
     padding: 0;
-
-    @include breakpoint($bp-small) {
-      font-size: 18px;
-    }
   }
 
   .menu-item {
