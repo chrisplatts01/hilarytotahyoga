@@ -4,12 +4,10 @@ $(function() {
  * Build jump menu
  */
 var $articleHeadings = $('#content').find('.article-body h2');
-console.log($articleHeadings);
 
 if ($articleHeadings.length > 0) {
-    var $jumpMenuWrapper = $('#jump-menu').find('.wrapper');
-    $jumpMenuWrapper.append('<ul id="jump-menu-items" class="jump-menu_items"></ul');
-    console.log($jumpMenuWrapper);
+    var $jumpMenuWrapper = $('#jumpMenu').find('.wrapper');
+    $jumpMenuWrapper.append('<ul id="jumpMenuItems" class="menu_items"></ul');
 
     $articleHeadings.each(function () {
         var $this = $(this);
@@ -21,7 +19,7 @@ if ($articleHeadings.length > 0) {
         $this.attr('id', menuItemLink)
 
         // Add menu item
-        $('#jump-menu-items').append(menuItemHtml);
+        $('#jumpMenuItems').append(menuItemHtml);
     });
 }
 
