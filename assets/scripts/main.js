@@ -3,9 +3,26 @@ $(function() {
 /**
  * Build jump menu
  */
-var $article-h2 = $('#content').find('.article-body').find('h2');
-if ($article-h2) {
-    consiole.log($article-h2);
+var $articleHeadings = $('#content').find('.article-body h2');
+console.log($articleHeadings);
+
+if ($articleHeadings.length > 0) {
+    var $jumpMenuWrapper = $('#jump-menu').find('.wrapper');
+    $jumpMenuWrapper.append('<ul id="jump-menu-items" class="jump-menu_items"></ul');
+    console.log($jumpMenuWrapper);
+
+    $articleHeadings.each(function () {
+        var $this = $(this);
+        var menuItemText = $this.text();
+        var menuItemLink = menuItemText.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');;
+        var menuItemHtml = '<li class="menu-item"><a href=" #' + menuItemLink + '">' + menuItemText + '</a></li>';
+
+        // Add id attribute to each heading
+        $this.attr('id', menuItemLink)
+
+        // Add menu item
+        $('#jump-menu-items').append(menuItemHtml);
+    });
 }
 
 /**
